@@ -1,0 +1,5 @@
+push 할 file이 있는 directory에 들어가서
+git add 파일명
+git commit -m "커밋내용"
+git push origin master
+아이디 비밀번호 입력.
