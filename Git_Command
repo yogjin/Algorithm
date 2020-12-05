@@ -3,3 +3,10 @@ git add 파일명
 git commit -m "커밋내용"
 git push origin master
 아이디 비밀번호 입력.
+
+repl.it에서 잔디가 안심어진다.
+-> 
+git config user.email "youngjin988@gmail.com"
+git config user.name "yogjin"
+git config --list로 확인.
+
