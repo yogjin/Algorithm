@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git config user.email "youngjin988@gmail.com"
+git config user.name "yogjin"
+
+exit 0
