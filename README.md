@@ -9,21 +9,19 @@ int main(void) {
 ```
 [간단한 md 편집법](https://ndb796.tistory.com/194)
 
-## 기본
+## 구현
 
-### 구현
+## Greedy
 
-### Greedy
+## BFS/DFS
 
-### BFS/DFS
+## DP
 
-### DP
+## 정렬
 
-### 정렬
-
-### 이진 탐색
+## 이진 탐색
 >'max,min,mid의 자료형을 long으로 두자.
-### 최단 경로
+## 최단 경로
 
-### 그래프
+## 그래프
 
