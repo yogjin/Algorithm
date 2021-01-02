@@ -1,6 +1,6 @@
 /* 
  * Author: Park Yeong-Jin
- * Date: 2021.1.1
+ * Date: 2021.1.2
  * email: youngjin988@gmail.com
  * 
  * https://github.com/yogjin/Algorithm
@@ -24,7 +24,7 @@ public class Main {
             int pl = p.length();//명령어 갯수
             int n = Integer.parseInt(br.readLine());//배열에 들어있는 수 개수
             String s = br.readLine();//배열
-            s = s.substring(1,s.length()-1); //문자열 자르기. 1 <= s < s.length 리턴.
+            s = s.substring(1,s.length()-1); //문자열 자르기. 1 <= s < s.length()-1 리턴.
             st = new StringTokenizer(s,",");
             for(int j = 1; j <= n; j++){
                 que.offerLast(Integer.parseInt(st.nextToken()));
@@ -54,8 +54,14 @@ public class Main {
             if(!flag){
                 sb.append("[");
                 while(!que.isEmpty()){
-                    sb.append(que.removeFirst());
-                    if(que.size() != 0) sb.append(",");
+                    if(front == true){
+                        sb.append(que.removeFirst());
+                        if(que.size() != 0) sb.append(",");    
+                    }
+                    else{
+                        sb.append(que.removeLast());
+                        if(que.size() != 0) sb.append(",");
+                    }
                 }
                 sb.append("]\n");
             }
