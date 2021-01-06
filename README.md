@@ -15,6 +15,29 @@ int main(void) {
 
 ## BFS/DFS
 
+### 1. 배열 초기화
+```
+int[][] dist = new int[4][4];
+for(int i = 0; i < dist.length; i++){
+  Arrays.fill(dist[i], -1);
+}
+```
+위 방법으로 2차원 배열 초기화가 가능하다.
+(거리계산하는 dist배열)
+### 2. 루프탈출
+```
+loop:
+while(true){
+  ...
+  ...
+  for(true){
+    if(true){
+      break loop;
+    }
+  }
+}
+``` 
+위와같이 원하는 루프를 탈출할 수 있다!
 ## DP
 
 ## 정렬
