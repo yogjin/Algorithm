@@ -1,6 +1,8 @@
 #기본코드
 import sys
+import copy
 from collections import deque
+from itertools import combinations
 input = sys.stdin.readline
 
 #2차원 배열을 90도 회전시킨다.
