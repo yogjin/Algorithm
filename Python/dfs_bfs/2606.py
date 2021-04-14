@@ -17,6 +17,18 @@ def dfs(v):
         if not vis[com]:
             dfs(com)
             cnt += 1
+def bfs(v):
+    global cnt
+    q = deque([v])
+    vis[v] = True
+    while q:
+        v = q.popleft()
+        for com in li[v]:
+            if not vis[com]:
+                q.append(com)
+                vis[com] = True
+                cnt += 1
 cnt = 0 #바이러스에 걸린 컴퓨터 수
 dfs(1)
+bfs(1)
 print(cnt)
