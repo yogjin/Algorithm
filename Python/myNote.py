@@ -23,7 +23,7 @@ a = [
 ]
 '''
 #입력값 2차원 리스트 한줄로 받기(리스트내포)
-board = [list(map(int,input().split())) for _ in range(n)] #n개의 행을 입력받을때 
+board = [list(map(int,input().split().rstrip())) for _ in range(n)] #n개의 행을 입력받을때 
 '''
 input:
     1 2 3
@@ -31,3 +31,4 @@ input:
     7 8 9
 board:
     [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+'''
