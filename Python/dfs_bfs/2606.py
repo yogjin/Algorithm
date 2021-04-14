@@ -12,11 +12,11 @@ for _ in range(M):
     li[b].append(a)
 def dfs(v):
     global cnt
-    cnt += 1
     vis[v] = True
     for com in li[v]:
         if not vis[com]:
             dfs(com)
+            cnt += 1
 cnt = 0 #바이러스에 걸린 컴퓨터 수
 dfs(1)
-print(cnt-1)
+print(cnt)
