@@ -18,21 +18,13 @@ def solve(N,K):
         vis[N] = True
         while q:
             now = q.popleft()
-            if 0 <= now-1 <= 100000:
-                if not vis[now-1]:
-                    vis[now-1] = True
-                    q.append(now-1)
-                    s[now-1] = s[now]+1
-            if 0 <= now+1 <= 100000:
-                if not vis[now+1]:
-                    vis[now+1] = True
-                    q.append(now+1)
-                    s[now+1] = s[now]+1
-            if 0 <= now*2 <= 100000:
-                if not vis[now*2]:
-                    vis[now*2] = True
-                    q.append(now*2)
-                    s[now*2] = s[now]+1
-            if now+1 == K or now*2 == K or now-1 == K:
-                return s[now]+1
+            #tuple 형식으로 이동방식을 넣어준다!
+            for nt in ((now-1),(now+1),(now*2)):
+                if 0 <= nt <= 100000:
+                    if not vis[nt]:
+                        q.append(nt)
+                        vis[nt] = True
+                        s[nt] = s[now]+1
+                        if nt == K:
+                            return s[now]+1
 print(solve(N,K))
