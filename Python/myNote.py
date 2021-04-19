@@ -5,6 +5,14 @@ from collections import deque
 from itertools import combinations
 input = sys.stdin.readline
 
+def solve():
+    #여기에 main코드 작성
+if __name__ == '__main__':
+    solve()
+'''
+Python시간 줄이기:
+전체를 함수 안에 넣는다.(놀랍게도 전역변수 참조가 지역변수 참조보다 느려서 이게 큰 효과가 있는 코드가 많습니다.)
+'''
 #2차원 배열을 90도 회전시킨다.
 def rotated_90(array_2d):
     list_of_tuples = zip(*array_2d[::-1])
