@@ -3,6 +3,7 @@ import sys
 import copy
 from collections import deque
 from itertools import combinations
+from itertools import permutations
 input = sys.stdin.readline
 
 def solve():
