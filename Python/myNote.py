@@ -1,6 +1,7 @@
 #기본모듈
 import sys
 import copy
+import heapq
 from collections import deque
 from itertools import combinations
 from itertools import permutations
