@@ -69,3 +69,6 @@ else:
 s = " ".join(re.findall("[0-9a-zA-Z]+", s))
 #문자열에서 공백 제거
 s = s.replace(" ","")
+#리스트,문자열 원소 뒤집기
+s.reverse()
+s = s[::-1]
