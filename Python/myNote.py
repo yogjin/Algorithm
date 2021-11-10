@@ -2,6 +2,8 @@
 import sys
 import copy
 import heapq
+import re #정규표현식
+from bisect import bisect_left,bisect_right #이진탐색
 from collections import deque
 from itertools import combinations
 from itertools import permutations
@@ -62,3 +64,8 @@ if count == 0:
 # 값이 x인 원소가 존재한다면
 else:
     print(count)
+
+#문자열에서 문자와 숫자만 추출
+s = " ".join(re.findall("[0-9a-zA-Z]+", s))
+#문자열에서 공백 제거
+s = s.replace(" ","")
