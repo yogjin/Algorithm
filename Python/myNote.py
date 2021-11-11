@@ -5,6 +5,7 @@ import heapq
 import re #정규표현식
 from bisect import bisect_left,bisect_right #이진탐색
 from collections import deque
+from collections import Counter #list안 원소별 개수 세기
 from itertools import combinations
 from itertools import permutations
 input = sys.stdin.readline
@@ -66,9 +67,19 @@ else:
     print(count)
 
 #문자열에서 문자와 숫자만 추출
-s = " ".join(re.findall("[0-9a-zA-Z]+", s))
+s = " ".join(re.findall("[0-9a-zA-Z]+", s)) #re.findall의 return: list
 #문자열에서 공백 제거
 s = s.replace(" ","")
 #리스트,문자열 원소 뒤집기
 s.reverse()
 s = s[::-1]
+
+#리스트,문자열 원소별 개수세기
+l = ['rrrr','ffff','ffff']
+l = Counter(l).most_common()
+print(l) #[('ffff', 2), ('rrrr', 1)]
+
+s = "abc 1 2 1 abc 3"
+s = s.split(" ")
+s = Counter(s).most_common()
+print(s) #[('abc', 2), ('1', 2), ('2', 1), ('3', 1)]
