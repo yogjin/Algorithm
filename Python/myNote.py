@@ -4,6 +4,7 @@ import copy
 import heapq
 import re #정규표현식
 from bisect import bisect_left,bisect_right #이진탐색
+from collections import defaultdict
 from collections import deque
 from collections import Counter #list안 원소별 개수 세기
 from itertools import combinations
@@ -83,3 +84,6 @@ s = "abc 1 2 1 abc 3"
 s = s.split(" ")
 s = Counter(s).most_common()
 print(s) #[('abc', 2), ('1', 2), ('2', 1), ('3', 1)]
+
+#dictionary에서 없는 키값으로 접근할 때 정해준 default type으로 값을 만들어주는 collections.defaultdict()
+dic = defaultdict(list)
